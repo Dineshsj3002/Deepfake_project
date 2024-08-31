@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Upload and Detect Deepfake</h2>
+    <form action="{{ url_for('dashboard') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*,video/*" required><br><br>
+        <button type="submit">Detect Deepfake</button>
+    </form>
+</body>
+</html>
